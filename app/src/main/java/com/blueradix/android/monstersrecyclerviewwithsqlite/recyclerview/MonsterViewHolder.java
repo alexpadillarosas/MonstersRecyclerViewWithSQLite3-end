@@ -21,12 +21,12 @@ import com.blueradix.android.monstersrecyclerviewwithsqlite.entities.Monster;
 public class MonsterViewHolder extends RecyclerView.ViewHolder {
 
     //bind the recycler_item_view.xml elements
-    public final ImageView monsterImageView;
-    public final TextView monsterNameEditText;
-    public final TextView monsterDescriptionEditText;
-    public final TextView monsterTotalVotesTextView;
-    public RatingBar ratingBar = null;
-    public Button actionButton1;
+    private final ImageView monsterImageView;
+    private final TextView monsterNameEditText;
+    private final TextView monsterDescriptionEditText;
+    private final TextView monsterTotalVotesTextView;
+    private RatingBar ratingBar;
+    private Button actionButton1;
 
     private OnMonsterListener onMonsterListener;
 
@@ -61,7 +61,7 @@ public class MonsterViewHolder extends RecyclerView.ViewHolder {
         monsterImageView.setImageResource(resID);
         this.monsterNameEditText.setText(monster.getName());
         this.monsterDescriptionEditText.setText(monster.getDescription());
-        this.monsterTotalVotesTextView.setText(monster.getVotes() + " Votes");
+        this.monsterTotalVotesTextView.setText(rootView.getContext().getString(R.string.view_holder_monster_votes_message, monster.getVotes()));
         float rate;
         if(monster.getVotes() > 0){
             rate = 1.0f * monster.getStars() / monster.getVotes();
@@ -73,7 +73,6 @@ public class MonsterViewHolder extends RecyclerView.ViewHolder {
 
     /**
      * Bind every monster with a listener, to be used when the user clicks a particular monster in the recycler view
-     *
      */
     public void bind(final Monster monster, final OnMonsterListener onMonsterListener){
         this.itemView.setOnClickListener(new View.OnClickListener() {
@@ -84,7 +83,13 @@ public class MonsterViewHolder extends RecyclerView.ViewHolder {
             }
         });
 
-
+        this.actionButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("booo", "click using the interface and button");
+                onMonsterListener.onMonsterClick(monster);
+            }
+        });
     }
 
 }

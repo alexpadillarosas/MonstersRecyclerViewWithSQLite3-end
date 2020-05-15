@@ -30,10 +30,10 @@ public class AddMonsterScrollingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_monster_scrolling);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,7 +84,7 @@ public class AddMonsterScrollingActivity extends AppCompatActivity {
         //get values from the layout
         String name = monsterNameEditText.getText().toString();
         if(name.trim().isEmpty()){
-            Snackbar.make(v, "Name is required", Snackbar.LENGTH_SHORT).show();
+            Snackbar.make(v, R.string.activity_add_monster_message_required_name, Snackbar.LENGTH_SHORT).show();
             monsterNameEditText.getText().clear();
             monsterNameEditText.requestFocus();
             return;

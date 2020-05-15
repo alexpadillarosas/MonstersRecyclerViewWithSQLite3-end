@@ -11,7 +11,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="320dp">
+        android:minHeight="720dp">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline3"
@@ -33,7 +33,7 @@
             android:layout_width="0dp"
             android:layout_height="55dp"
             android:layout_marginTop="8dp"
-            android:hint="Type your monster's name"
+            android:hint="@string/activity_add_monster_text_hint_name"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintStart_toStartOf="@+id/guideline3"
             app:layout_constraintTop_toTopOf="parent">
@@ -52,7 +52,7 @@
             android:layout_width="0dp"
             android:layout_height="56dp"
             android:layout_marginTop="8dp"
-            android:hint="add a short description"
+            android:hint="@string/activity_add_monster_text_hint_description"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintStart_toStartOf="@+id/guideline3"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
@@ -80,7 +80,7 @@
             android:id="@+id/textView"
             android:layout_width="0dp"
             android:layout_height="32dp"
-            android:text="scariness"
+            android:text="@string/activity_add_monster_label_scariness"
             android:textSize="18sp"
             app:layout_constraintEnd_toStartOf="@+id/scarinessSeekBar"
             app:layout_constraintHorizontal_bias="0.5"
@@ -92,7 +92,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
-            android:text="Cancel"
+            android:text="@string/activity_add_monster_button_label_cancel"
             app:icon="@drawable/baseline_cancel_black_18dp"
             app:iconGravity="textStart"
             app:iconPadding="8dp"
@@ -108,7 +108,7 @@
             android:layout_marginStart="4dp"
             android:layout_marginTop="32dp"
             android:gravity="center"
-            android:text="Add"
+            android:text="@string/activity_add_monster_button_label_add"
             app:icon="@drawable/baseline_check_circle_outline_black_18dp"
             app:iconGravity="textStart"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"

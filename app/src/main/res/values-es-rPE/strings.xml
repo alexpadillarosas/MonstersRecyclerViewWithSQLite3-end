@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lindos Monstruos</string>
+    <string name="action_settings">Configuracion</string>
+    <string name="recycler_item_view_card_button_action_1">Acción 1</string>
+    <string name="recycler_item_view_card_button_action_2">Acción 2</string>
+    <string name="recycler_item_view_card_image_content_description_monster">Muestra la imagen del monstruo</string>
+    <string name="activity_add_monster_title">Crea uno</string>
+    <string name="activity_add_monster_label_scariness">miedo</string>
+    <string name="activity_add_monster_text_hint_name">Ingresa el nombre de tu monstruo</string>
+    <string name="activity_add_monster_text_hint_description">Ańade una corta descripción</string>
+    <string name="activity_add_monster_button_label_cancel">Cancelar</string>
+    <string name="activity_add_monster_button_label_add">Ańadir</string>
+    <string name="activity_monster_detail_title">"Califícame "</string>
+    <string name="activity_monster_detail_label_rate">Califica este monstruo</string>
+    <string name="activity_monster_detail_image_content_description">Muestra la imagen pequeña del monstruo</string>
+    <string name="activity_main_message_monster_created">Mounstruo creado. id: %1$d</string>
+    <string name="activity_main_message_monster_not_created">No se pudo crear tu mounstruo, trata otra vez</string>
+    <string name="activity_add_monster_message_required_name">El nombre es necesario</string>
+    <string name="view_holder_monster_votes_message">%1$d votos</string>
+</resources>
