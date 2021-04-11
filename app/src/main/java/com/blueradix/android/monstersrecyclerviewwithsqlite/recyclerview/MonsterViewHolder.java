@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.blueradix.android.monstersrecyclerviewwithsqlite.R;
 import com.blueradix.android.monstersrecyclerviewwithsqlite.entities.Monster;
+import com.google.android.material.snackbar.Snackbar;
 
 /**
  * We create this view holder representing the recycler_item_view.xml
@@ -87,7 +88,9 @@ public class MonsterViewHolder extends RecyclerView.ViewHolder {
             @Override
             public void onClick(View v) {
                 Log.i("booo", "click using the interface and button");
-                onMonsterListener.onMonsterClick(monster);
+//                onMonsterListener.onMonsterClick(monster);
+                Snackbar.make(actionButton1.getRootView(), "Hi, I'm " + monster.getName(), Snackbar.LENGTH_SHORT).show();
+
             }
         });
     }
