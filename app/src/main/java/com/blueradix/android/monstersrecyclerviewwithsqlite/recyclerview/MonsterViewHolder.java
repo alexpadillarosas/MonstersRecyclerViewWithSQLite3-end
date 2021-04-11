@@ -89,7 +89,7 @@ public class MonsterViewHolder extends RecyclerView.ViewHolder {
             public void onClick(View v) {
                 Log.i("booo", "click using the interface and button");
 //                onMonsterListener.onMonsterClick(monster);
-                Snackbar.make(actionButton1.getRootView(), "Hi, I'm " + monster.getName(), Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(actionButton1.getRootView(), actionButton1.getRootView().getContext().getString(R.string.view_holder_monster_action_1, monster.getName(), monster.getVotes()), Snackbar.LENGTH_SHORT).show();
 
             }
         });

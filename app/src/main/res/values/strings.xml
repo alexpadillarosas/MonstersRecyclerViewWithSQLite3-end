@@ -24,7 +24,7 @@
 
 
     <string name="view_holder_monster_votes_message">%1$d votes</string>
-
+    <string name="view_holder_monster_action_1">Hi I\'m %1$s and I\'ve got %2$d votes</string>
 
 
 </resources>
